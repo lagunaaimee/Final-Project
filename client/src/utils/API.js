@@ -1,5 +1,7 @@
 import axios from "axios";
 
+//Api query database
+
 export default {
   // Gets all books
   getBooks: function() {
