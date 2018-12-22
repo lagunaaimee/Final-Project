@@ -8,12 +8,6 @@ const meetupSchema = new Schema({
     required: true
   },
 
-  who: {
-    type: String, 
-    trim: true, 
-    required: true
-  },
-
   link: {
     type: String, 
     trim: true, 
@@ -21,12 +15,12 @@ const meetupSchema = new Schema({
   },
 
   description: {
-    type: String, 
-    validate: [
-      function(description) {
-        return description.length;
-      }
-    ]
+    type: String
+    // validate: [
+    //   function(description) {
+    //     return description.length;
+    //   }
+    // ]
   },
 
   city: {
@@ -40,16 +34,14 @@ const meetupSchema = new Schema({
     trim: true, 
     required: true
   },
-
-  members: {
-    type: Number, 
-    unique: true, 
+  
+  who: {
+    type: String, 
+    trim: true, 
     required: true
   },
 
 })
-
-
 
 const Meetup = mongoose.model("Meetup", meetupSchema);
 
