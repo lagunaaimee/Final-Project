@@ -27,18 +27,18 @@ class Blog extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Blog Should I Read?</h1>
+              <h1>Blog</h1>
             </Jumbotron>
             <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Book</FormBtn>
+              <TextArea name="synopsis" placeholder="Details (Optional)" />
+              <FormBtn>Post</FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Blog On My List</h1>
+              <h1>My Blogs</h1>
             </Jumbotron>
             {this.state.blog.length ? (
               <List>
