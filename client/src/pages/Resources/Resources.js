@@ -27,18 +27,18 @@ class Resources extends Component {
         <Row>
           <Col size="md-6">
             <Jumbotron>
-              <h1>What Resources Should I Read?</h1>
+              <h1>Resources</h1>
             </Jumbotron>
             <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
               <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Resources</FormBtn>
+              <FormBtn>Save</FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             <Jumbotron>
-              <h1>Resources On My List</h1>
+              <h1>My Saved Resources</h1>
             </Jumbotron>
             {this.state.resources.length ? (
               <List>
