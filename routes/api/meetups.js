@@ -9,7 +9,7 @@ router.route("/")
 // Matches with "/api/meetups/:id"
 router
   .route("/:id")
-  .get(meetupsController.findById)
+  // .get(meetupsController.findById)
   .put(meetupsController.update)
   .delete(meetupsController.remove);
 
