@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
-import DeleteBtn from "../../components/DeleteBtn";
-import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+// import DeleteBtn from "../../components/DeleteBtn";
+// import { Col, Row, Container } from "../../components/Grid";
+// import { List, ListItem } from "../../components/List";
+// import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Home extends Component {
   state = {
@@ -25,93 +25,74 @@ class Home extends Component {
     return (
       <div className="Container fluid">
         {/* <Row> */}
-        <div className="row my-4">
-          <div className="col-lg-8">
-            <img className="img-fluid rounded" src="https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+        <div className="row align-items-center">
+          <div className="col-lg-12">
+            <img className="img-fluid rounded" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
             </img>
           </div>
           {/* <!-- /.col-lg-8 --> */}
-          <div className="col-lg-4">
+          <div className="col-md-12 text-center">
             <h1>What We're About</h1>
-            <p>Details about our website.....</p>
+            <p>The purpose of our site is to serve as a Hub for all aspects of the Dev Life.....</p>
             <a className="btn btn-primary btn-lg" href="/">About Us</a>
           </div>
-          <div class="card text-white bg-secondary my-4 col-md-12 text-center">
-            <div class="card-body">
-              <p class="text-white m-0">Collaborators</p>
+          <div className="card text-white bg-secondary my-4 col-md-12 text-center">
+            <div className="card-body">
+              <h2 className="text-white m-0">Our Team</h2>
+              <p>Github Links/Photos of team members</p>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h2 class="card-title">Card One</h2>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn btn-primary">More Info</a>
-                </div>
+        </div>
+
+
+        <div className="row">
+          <div className="col-md-4 mb-4 text-center">
+            <div className="card h-100">
+              <div className="card-body">
+                <a className="card-title" href="api/Meetup">Meetup</a>
+                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+              </div>
+              <div className="card-footer">
+                <a href="#" class="btn btn-primary">Join</a>
               </div>
             </div>
-            {/* <!-- /.col-md-4 --> */}
-            <div class="col-md-4 mb-4">
+          </div>
+
+          {/* <div class="col-md-4 mb-4">
               <div class="card h-100">
                 <div class="card-body">
-                  <h2 class="card-title">Card Two</h2>
+                  <a className="card-title" href="api/Forum">Forum</a>
                   <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
                 </div>
                 <div class="card-footer">
                   <a href="#" class="btn btn-primary">More Info</a>
                 </div>
               </div>
-            </div>
-            {/* <!-- /.col-md-4 --> */}
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <div class="card-body">
-                  <h2 class="card-title">Card Three</h2>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
-                </div>
-                <div class="card-footer">
-                  <a href="#" class="btn btn-primary">More Info</a>
-                </div>
+            </div> */}
+
+          <div className="col-md-4 mb-4 text-center">
+            <div className="card h-100">
+              <div className="card-body">
+                <a className="card-title" href="api/Blog">Blog</a>
+                <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
+              </div>
+              <div className="card-footer">
+                <a href="#" class="btn btn-primary">Post</a>
               </div>
             </div>
-            {/* <!-- /.col-md-4 --> */}
           </div>
-          {/* <Col size="md-12">
-            <Jumbotron>
-              <h1>About</h1>
-            </Jumbotron> */}
-          {/* <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Submit Home</FormBtn>
-            </form>
-          </Col>
-          <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Home On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
-              <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <a href={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </a>
-                    <DeleteBtn />
-                  </ListItem>
-                ))}
-              </List>
-            ) : ( */}
-          {/* <h3>No Results to Display</h3> */}
-          {/* )} */}
-          {/* </Col>
-        </Row> */}
+
+          <div class="col-md-4 mb-4 text-center">
+            <div class="card h-100">
+              <div class="card-body">
+                <a className="card-title" href="api/Resources">Resources</a>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="btn btn-primary">Follow</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

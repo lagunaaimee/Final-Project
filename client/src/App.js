@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 // import Meetup from "./pages/Meetup";
 // import Resources from "./pages/Resources";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 
 const App = () => (
   <div>
@@ -14,6 +15,7 @@ const App = () => (
     <Forum />
     <Meetup />
     <Resources /> */}
+    <Footer />
   </div>
 );
 
