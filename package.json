@@ -22,12 +22,14 @@
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.15.4",
     "if-env": "^1.0.4",
-    "meetup-api": "^1.4.35",
+    "meetup-api": "^1.4.36",
     "mongoose": "^5.0.17",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "request": "^2.88.0"
   }
 }
