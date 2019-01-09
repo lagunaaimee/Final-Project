@@ -8,9 +8,12 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Resources extends Component {
   state = {
-    resources: []
+    resources: [],
   };
-
+  //Resources.collection.insert(docs, options, callback) {}
+  //for (i = 0; i < resources.length; i++) {
+   // text += "The number is " + i + "<br>";
+  //}
   componentDidMount() {
     this.loadResources();
   }
