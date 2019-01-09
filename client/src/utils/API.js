@@ -61,19 +61,19 @@ saveForum: function(forumData) {
 
   // Gets all Meetups
   getMeetups: function() {
-    return axios.get("/api/meetup");
+    return axios.get("/api/meetups");
   },
   // Gets the book with the given id
   getMeetup: function(id) {
-    return axios.get("/api/meetup/" + id);
+    return axios.get("/api/meetups/" + id);
   },
   // Deletes the book with the given id
   deleteMeetup: function(id) {
-    return axios.delete("/api/meetup/" + id);
+    return axios.delete("/api/meetups/" + id);
   },
   // Saves a book to the database
   saveMeetup: function(meetupData) {
-    return axios.post("/api/meetup", meetupData);
+    return axios.post("/api/meetups", meetupData);
   },
 
  
