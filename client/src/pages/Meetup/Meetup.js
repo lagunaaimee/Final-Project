@@ -7,17 +7,25 @@ import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
 class Meetup extends Component {
+  // Setting our component's initial state
   state = {
-    meetup: []
+    meetups: [],
+    name: "",
+    link: "",
+    city: "",
+    state: "",
+    who: "",
   };
 
+    // When the component mounts, load all meetups and save them to this.state.Meetup
   componentDidMount() {
     this.loadMeetup();
   }
 
   loadMeetup = () => {
-    API.getMeetup()
-      .then(res => this.setState({ meetup: res.data }))
+    API.getMeetups()
+      .then(res => this.setState({ meetups: res.data, name: "",link: "", city: "", state: "", who: "" })
+      )
       .catch(err => console.log(err));
   };
 
@@ -40,18 +48,20 @@ class Meetup extends Component {
             <Jumbotron>
               <h1>My Saved Meetup Groups</h1>
             </Jumbotron>
-            {this.state.meetup.length ? (
+            {this.state.meetups.length ? (
               <List>
-                {this.state.meetup.map(meetup => (
+                {this.state.meetups.map(meetup => {
+                   return (
                   <ListItem key={meetup._id}>
                     <a href={"/meetup/" + meetup._id}>
                       <strong>
-                        {meetup.title} by {meetup.author}
+                        {meetup.name} by {meetup.link} {meetup.city} {meetup.state} {meetup.who}
                       </strong>
                     </a>
                     <DeleteBtn />
                   </ListItem>
-                ))}
+                );
+                   })}
               </List>
             ) : (
               <h3>No Results to Display</h3>
@@ -61,6 +71,6 @@ class Meetup extends Component {
       </Container>
     );
   }
-}
+} 
 
 export default Meetup;
