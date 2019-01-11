@@ -26,10 +26,11 @@
     "express": "^4.15.4",
     "if-env": "^1.0.4",
     "meetup-api": "^1.4.36",
-    "mongoose": "^5.0.17",
+    "mongoose": "^5.4.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "reactstrap": "^6.5.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "snoowrap": "^1.15.2"
   }
 }

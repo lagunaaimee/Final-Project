@@ -9,18 +9,17 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 class Resources extends Component {
   state = {
     resources: [],
+    title: "",
+    link: "",
   };
-  //Resources.collection.insert(docs, options, callback) {}
-  //for (i = 0; i < resources.length; i++) {
-   // text += "The number is " + i + "<br>";
-  //}
+  
   componentDidMount() {
     this.loadResources();
   }
 
   loadResources = () => {
     API.getResources()
-      .then(res => this.setState({ resources: res.data }))
+      .then(res => this.setState({ resources: res.data, title:"", link:"" }))
       .catch(err => console.log(err));
   };
 
@@ -45,16 +44,18 @@ class Resources extends Component {
             </Jumbotron>
             {this.state.resources.length ? (
               <List>
-                {this.state.resources.map(book => (
-                  <ListItem key={book._id}>
-                    <a href={"/resources/" + book._id}>
+                {this.state.resources.map(resource => {
+                  return (
+                  <ListItem key={resource._id}>
+                    <a href={"/resources/" + resource._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {resource.title} by {resource.link}
                       </strong>
                     </a>
                     <DeleteBtn />
                   </ListItem>
-                ))}
+                  );
+                  })}
               </List>
             ) : (
               <h3>No Results to Display</h3>
