@@ -15,16 +15,16 @@ const Nav = () => (
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/api/Meetup">Meetup</a>
+            <a className="nav-link" href="/meetup">Meetup</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/api/Forum">Forum </a>
+            <a className="nav-link" href="/forum">Forum </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/api/Blog">Blog</a>
+            <a className="nav-link" href="/blog">Blog</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/api/Resources">Resources</a>
+            <a className="nav-link" href="/resources">Resources</a>
           </li>
         </ul>
       </div>
