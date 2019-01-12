@@ -7,10 +7,10 @@ export default {
   getHome: function() {
     return axios.get("/api/home");
   },
-  // Gets the book with the given id
-  getHome: function(id) {
-    return axios.get("/api/home/" + id);
-  },
+  // // Gets the book with the given id
+  // getHome: function(id) {
+  //   return axios.get("/api/home/" + id);
+  // },
   // Deletes the book with the given id
   deleteHome: function(id) {
     return axios.delete("/api/home/" + id);
