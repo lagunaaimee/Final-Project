@@ -8,7 +8,7 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-    books: []
+    home: []
   };
 
   componentDidMount() {
@@ -17,7 +17,7 @@ class Home extends Component {
 
   loadHome = () => {
     API.getHome()
-      .then(res => this.setState({ books: res.data }))
+      .then(res => this.setState({ home: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -49,7 +49,7 @@ class Home extends Component {
           <div className="col-md-4 mb-4 text-center">
             <div className="card h-100">
               <div className="card-body">
-                <a className="card-title" href="api/Meetup">Meetup</a>
+                <a className="card-title" href="../Meetup">Meetup</a>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
               </div>
               <div className="card-footer">
