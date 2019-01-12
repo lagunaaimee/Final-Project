@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
+// import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 // import DeleteBtn from "../../components/DeleteBtn";
 // import { Col, Row, Container } from "../../components/Grid";
@@ -49,11 +49,11 @@ class Home extends Component {
           <div className="col-md-4 mb-4 text-center">
             <div className="card h-100">
               <div className="card-body">
-                <a className="card-title" href="api/Meetup">Meetup</a>
+                <a className="card-title" href="meetup">Meetup</a>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
               </div>
               <div className="card-footer">
-                <a href="#" class="btn btn-primary">Join</a>
+                <a href="/meetup" class="btn btn-primary">Join</a>
               </div>
             </div>
           </div>
@@ -73,11 +73,11 @@ class Home extends Component {
           <div className="col-md-4 mb-4 text-center">
             <div className="card h-100">
               <div className="card-body">
-                <a className="card-title" href="api/Blog">Blog</a>
+                <a className="card-title" href="/blog">Blog</a>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem magni quas ex numquam, maxime minus quam molestias corporis quod, ea minima accusamus.</p>
               </div>
               <div className="card-footer">
-                <a href="#" class="btn btn-primary">Post</a>
+                <a href="/blog" class="btn btn-primary">Post</a>
               </div>
             </div>
           </div>
@@ -85,11 +85,11 @@ class Home extends Component {
           <div class="col-md-4 mb-4 text-center">
             <div class="card h-100">
               <div class="card-body">
-                <a className="card-title" href="api/Resources">Resources</a>
+                <a className="card-title" href="/resources">Resources</a>
                 <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tenetur ex natus at dolorem enim! Nesciunt pariatur voluptatem sunt quam eaque, vel, non in id dolore voluptates quos eligendi labore.</p>
               </div>
               <div class="card-footer">
-                <a href="#" class="btn btn-primary">Follow</a>
+                <a href="/resources" class="btn btn-primary">Follow</a>
               </div>
             </div>
           </div>
