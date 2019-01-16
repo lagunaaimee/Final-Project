@@ -87,8 +87,10 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   scrape: function (req, res) {
-    console.log("HIT")  
-    r.getSubreddit('webdev').getNew().then(function(res2){console.log(res2), res.json(500)})
+    console.log("HIT")
+    r.getSubreddit('webdev').getNew().then(function (res2) { console.log(res2), res.json(res2) })
+
+
     // // Make a request for the news section of `reddit`
     // request("https://old.reddit.com/r/webdev/", function (error, response, html) {
     //   console.log(html)
@@ -102,7 +104,7 @@ module.exports = {
     //     // Save the text and href of each link enclosed in the current element
     //     //console.log($(element).children("a").children("p"))
     //     var title = $(element).text();
-   
+
     //     //var link = $(element).children("a").attr("href");
     //     // Save these results in an object that we'll push into the results array we defined earlier
     //     results.push({
@@ -129,6 +131,6 @@ module.exports = {
     //   res.json(500);
     // });
 
-    
+
   }
 };
