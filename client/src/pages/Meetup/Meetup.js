@@ -17,14 +17,14 @@ class Meetup extends Component {
     who: "",
   };
 
-    // When the component mounts, load all meetups and save them to this.state.Meetup
+  // When the component mounts, load all meetups and save them to this.state.Meetup
   componentDidMount() {
     this.loadMeetup();
   }
 
   loadMeetup = () => {
     API.getMeetups()
-      .then(res => this.setState({ meetups: res.data, name: "",link: "", city: "", state: "", who: "" })
+      .then(res => this.setState({ meetups: res.data, name: "", link: "", city: "", state: "", who: "" })
       )
       .catch(err => console.log(err));
   };
@@ -34,9 +34,17 @@ class Meetup extends Component {
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            <div
+              style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
+              className="jumbotron"
+            >
               <h1>Meetup</h1>
-            </Jumbotron>
+            </div>
+
+
+
+
+
             <form>
               <Input name="title" placeholder="Title (required)" />
               <Input name="author" placeholder="Author (required)" />
@@ -51,26 +59,26 @@ class Meetup extends Component {
             {this.state.meetups.length ? (
               <List>
                 {this.state.meetups.map(meetup => {
-                   return (
-                  <ListItem key={meetup._id}>
-                    <a href={"/meetup/" + meetup._id}>
-                      <strong>
-                        {meetup.name} by {meetup.link} {meetup.city} {meetup.state} {meetup.who}
-                      </strong>
-                    </a>
-                    <DeleteBtn />
-                  </ListItem>
-                );
-                   })}
+                  return (
+                    <ListItem key={meetup._id}>
+                      <a href={"/meetup/" + meetup._id}>
+                        <strong>
+                          {meetup.name} by {meetup.link} {meetup.city} {meetup.state} {meetup.who}
+                        </strong>
+                      </a>
+                      <DeleteBtn />
+                    </ListItem>
+                  );
+                })}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
       </Container>
     );
   }
-} 
+}
 
 export default Meetup;

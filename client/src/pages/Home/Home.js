@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Jumbotron from "../../components/Jumbotron";
+import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 // import DeleteBtn from "../../components/DeleteBtn";
 // import { Col, Row, Container } from "../../components/Grid";
@@ -8,7 +8,7 @@ import API from "../../utils/API";
 
 class Home extends Component {
   state = {
-    books: []
+    elements: []
   };
 
   componentDidMount() {
@@ -17,7 +17,7 @@ class Home extends Component {
 
   loadHome = () => {
     API.getHome()
-      .then(res => this.setState({ books: res.data }))
+      .then(res => this.setState({ elements: res.data }))
       .catch(err => console.log(err));
   };
 
@@ -25,9 +25,9 @@ class Home extends Component {
     return (
       <div className="Container fluid">
         {/* <Row> */}
-        <div className="row align-items-center">
+        <div className="row align-center col align-center">
           <div className="col-lg-12">
-            <img className="img-fluid rounded" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+            <img className="img-fluid rounded" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress" alt="">
             </img>
           </div>
           {/* <!-- /.col-lg-8 --> */}
@@ -58,7 +58,7 @@ class Home extends Component {
             </div>
           </div>
 
-          {/* <div class="col-md-4 mb-4">
+          <div class="col-md-4 mb-4">
               <div class="card h-100">
                 <div class="card-body">
                   <a className="card-title" href="api/Forum">Forum</a>
@@ -68,7 +68,7 @@ class Home extends Component {
                   <a href="#" class="btn btn-primary">More Info</a>
                 </div>
               </div>
-            </div> */}
+            </div>
 
           <div className="col-md-4 mb-4 text-center">
             <div className="card h-100">

@@ -6,7 +6,7 @@ import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
 
-class Forum extends Component {
+export default class Forum extends Component {
   state = {
     forum: []
   };
@@ -23,6 +23,7 @@ class Forum extends Component {
 
   render() {
     return (
+      <div>
       <Container fluid>
         <Row>
           <Col size="md-6">
@@ -59,8 +60,9 @@ class Forum extends Component {
           </Col>
         </Row>
       </Container>
+      </div>
     );
   }
 }
 
-export default Forum;
+
