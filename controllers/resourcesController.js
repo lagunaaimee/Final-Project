@@ -1,5 +1,6 @@
 //Dependencies
 const express = require("express");
+
 //var mongojs = require("mongojs");
 //Makes scrapping happen
 var cheerio = require("cheerio");
@@ -54,6 +55,7 @@ var collections = ["resources"];
 // Defining methods for the resourcesController
 module.exports = {
   findAll: function (req, res) {
+    
     db.Resources
       .find(req.query)
       .sort({ date: -1 })
@@ -87,6 +89,7 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   scrape: function (req, res) {
+    
     console.log("HIT")
     r.getSubreddit('webdev').getNew().then(function (res2) { console.log(res2), res.json(res2) })
 
