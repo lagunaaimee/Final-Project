@@ -22,7 +22,7 @@ module.exports = {
           }
           console.log(obj)
           //push entry to empty array
-          emptyArray.push(obj)  
+          emptyArray.push(obj)
           //db.Meetup.create(obj).then(resl => {  }).catch(err => res.status(422).json(err));
           //db.meetup.create with new array
         }
@@ -52,6 +52,13 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
+
+  findById: function (req, res) {
+    db.Meetup
+      .findById(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => res.status(422).json(err));
+  },
 
 };
