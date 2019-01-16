@@ -79,7 +79,7 @@ saveForum: function(forumData) {
  
   // Gets all Resources
   getResources: function() {
-    return axios.get("/api/resources");
+    return axios.get("/api/resources/scrape");
   },
   // Gets the book with the given id
   getResource: function(id) {
