@@ -1,12 +1,17 @@
 import React from "react";
+import homeImage from "../../images/apartments.jpg";
 
-const Jumbotron = ({ children }) => (
-  <div
-    style={{ height: 300, clear: "both", paddingTop: 120, textAlign: "center" }}
-    className="jumbotron"
-  >
-    {children}
-  </div>
+const jumboStyle = {
+  width: "2000px",
+  height: "1000px",
+  clear: "both",
+  paddingTop: "120px",
+  textAlign: "center",
+  backgroundImage: "url(" + homeImage  + ")"
+};
+console.log(jumboStyle)
+const Jumbotron = () => (
+  <div style={jumboStyle}></div>
 );
 
 export default Jumbotron;

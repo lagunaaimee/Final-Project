@@ -25,11 +25,12 @@ class Home extends Component {
     return (
       <div className="Container fluid">
         {/* <Row> */}
+        <Jumbotron/>
         <div className="row align-items-center">
-          <div className="col-lg-12">
+          {/* <div className="col-lg-12">
             <img className="img-fluid rounded" src="https://images.pexels.com/photos/1509428/pexels-photo-1509428.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
             </img>
-          </div>
+          </div> */}
           {/* <!-- /.col-lg-8 --> */}
           <div className="col-md-12 text-center">
             <h1>What We're About</h1>
