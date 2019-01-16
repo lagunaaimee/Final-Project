@@ -4,13 +4,14 @@ import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn";
 import { Col, Row, Container } from "../../components/Grid";
 import { List, ListItem } from "../../components/List";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 
 class Resources extends Component {
   state = {
     resources: [],
     title: "",
     link: "",
+    thumbnail:"",
   };
   
   componentDidMount() {
@@ -19,7 +20,7 @@ class Resources extends Component {
 
   loadResources = () => {
     API.getResources()
-      .then(res => this.setState({ resources: res.data, title:"", link:"" }))
+      .then(res => this.setState({ resources: res.data, title:"", link:"", thumbnail: "",}))
       .catch(err => console.log(err));
   };
 
@@ -27,18 +28,19 @@ class Resources extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
               <h1>Resources</h1>
             </Jumbotron>
             <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Save</FormBtn>
+              <h3>Search</h3>
+              <Input name="search" placeholder="Topic (required)" />
+              {/* <Input name="author" placeholder="Author (required)" /> */}
+              {/* <TextArea name="synopsis" placeholder="Synopsis (Optional)" /> */}
+              <FormBtn>Go</FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-12">
             <Jumbotron>
               <h1>My Saved Resources</h1>
             </Jumbotron>
@@ -46,10 +48,10 @@ class Resources extends Component {
               <List>
                 {this.state.resources.map(resource => {
                   return (
-                  <ListItem key={resource._id}>
-                    <a href={"/resources/" + resource._id}>
+                  <ListItem key={resource.permalink}>
+                    <a href={"https://www.reddit.com" + resource.permalink}>
                       <strong>
-                        {resource.title} by {resource.link}
+                        {resource.title} {resource.link}
                       </strong>
                     </a>
                     <DeleteBtn />
