@@ -53,9 +53,9 @@ class Meetup extends Component {
                 {this.state.meetups.map(meetup => {
                    return (
                   <ListItem key={meetup._id}>
-                    <a href={"/meetup/" + meetup._id}>
+                    <a href={meetup.link}>
                       <strong>
-                        {meetup.name} by {meetup.link} {meetup.city} {meetup.state} {meetup.who}
+                        {meetup.name} {meetup.city} {meetup.state} by {meetup.who}
                       </strong>
                     </a>
                     <DeleteBtn />

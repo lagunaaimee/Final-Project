@@ -50,13 +50,13 @@ class Home extends Component {
                 </div>
 
                 <div class="col-lg-3 col-sm-3 text-center">
-                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://avatars2.githubusercontent.com/u/30612888?s=460&v=4" alt=""></img>
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://files.slack.com/files-pri/TB2803CP7-FFG3S81FG/20180214_185458.jpg" alt=""></img>
                   <a href="https://github.com/bluesally1031"><h2>Renee Reynolds</h2></a>
                   <p>Project Role</p>
                 </div>
 
                 <div class="col-lg-3 col-sm-3 text-center">
-                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt=""></img>
+                  <img class="rounded-circle img-fluid d-block mx-auto" src="https://files.slack.com/files-pri/TB2803CP7-FFDUXGQNL/20190115_195319.jpg" alt=""></img>
                   <a href="https://github.com/btshadeed"><h2>Bilal Shadeed</h2></a>
                   <p>Project Role</p>
                 </div>
