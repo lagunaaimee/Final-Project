@@ -8,8 +8,12 @@ router.route("/")
   .get(resourcesController.findAll)
   .post(resourcesController.create);
 
-  router.route("/scrape")
-  .get(resourcesController.scrape);
+router.route("/scrape")
+  .get(resourcesController.scrape)
+  .put(resourcesController.update)
+  .delete(resourcesController.remove);
+
+  
 // Matches with "/api/resources/:id"
 // router
 //   .route("/:id")
@@ -21,4 +25,4 @@ router.route("/")
 // Scrape data from one site and place it into the mongodb db
 
 
-  module.exports = router;
+module.exports = router;

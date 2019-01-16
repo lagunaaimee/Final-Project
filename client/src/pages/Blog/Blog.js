@@ -25,18 +25,25 @@ class Blog extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          {/* Blog Title Jumbotron */}
+          <Col size="md-12">
             <Jumbotron>
               <h1>Blog</h1>
             </Jumbotron>
-            <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Details (Optional)" />
-              <FormBtn>Post</FormBtn>
-            </form>
           </Col>
-          <Col size="md-6 sm-12">
+
+          {/* Blog Form Input */}
+          <Col size="md-6">
+          <form>
+              <Input name="title" placeholder="Blog Title (required)" />
+              <Input name="author" placeholder="User Name (required)" />
+              <TextArea name="synopsis" placeholder="Blog Details (required)" />
+              <FormBtn>Post</FormBtn>
+          </form>
+          </Col>
+
+          {/*Saved Blogs from database displayed here */}
+          <Col size="md-12">
             <Jumbotron>
               <h1>My Blogs</h1>
             </Jumbotron>
@@ -54,8 +61,8 @@ class Blog extends Component {
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
-            )}
+                <h3>No Results to Display</h3>
+              )}
           </Col>
         </Row>
       </Container>
