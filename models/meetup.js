@@ -40,6 +40,7 @@ const meetupSchema = new Schema({
     trim: true, 
     required: true
   },
+  
 
 })
 

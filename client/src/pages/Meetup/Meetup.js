@@ -24,7 +24,7 @@ class Meetup extends Component {
 
   loadMeetup = () => {
     API.getMeetups()
-      .then(res => this.setState({ meetups: res.data, name: "",link: "", city: "", state: "", who: "" })
+      .then(res => this.setState({ meetups: res.data, name: "",link: "", city: "", state: "", who: ""})
       )
       .catch(err => console.log(err));
   };
@@ -33,18 +33,12 @@ class Meetup extends Component {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
               <h1>Meetup</h1>
             </Jumbotron>
-            <form>
-              <Input name="title" placeholder="Title (required)" />
-              <Input name="author" placeholder="Author (required)" />
-              <TextArea name="synopsis" placeholder="Synopsis (Optional)" />
-              <FormBtn>Save</FormBtn>
-            </form>
           </Col>
-          <Col size="md-6 sm-12">
+          <Col size="md-12">
             <Jumbotron>
               <h1>My Saved Meetup Groups</h1>
             </Jumbotron>

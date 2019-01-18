@@ -32,13 +32,7 @@ class Resources extends Component {
             <Jumbotron>
               <h1>Resources</h1>
             </Jumbotron>
-            <form>
-              <h3>Search</h3>
-              <Input name="search" placeholder="Topic (required)" />
-              {/* <Input name="author" placeholder="Author (required)" /> */}
-              {/* <TextArea name="synopsis" placeholder="Synopsis (Optional)" /> */}
-              <FormBtn>Go</FormBtn>
-            </form>
+        
           </Col>
           <Col size="md-12">
             <Jumbotron>
@@ -51,9 +45,16 @@ class Resources extends Component {
                   <ListItem key={resource.permalink}>
                     <a href={"https://www.reddit.com" + resource.permalink}>
                       <strong>
-                        {resource.title} {resource.link}
+                        {resource.title} {resource.link} 
                       </strong>
                     </a>
+                    <p>
+                    {resource.selftext}
+                    </p>
+                    {resource.author_fullname}
+                    <p>
+
+                    </p>
                     <DeleteBtn />
                   </ListItem>
                   );

@@ -18,7 +18,7 @@ module.exports = {
             //description: result.data[i].description,
             city: result.data[i].city,
             state: result.data[i].state,
-            who: result.data[i].who
+            who: result.data[i].who,
           }
           console.log(obj)
           //push entry to empty array
