@@ -33,5 +33,13 @@
     "reactstrap": "^6.5.0",
     "request": "^2.88.0",
     "snoowrap": "^1.15.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lagunaaimee/Final-Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lagunaaimee/Final-Project/issues"
+  },
+  "homepage": "https://github.com/lagunaaimee/Final-Project#readme"
 }
