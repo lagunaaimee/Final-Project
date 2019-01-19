@@ -41,22 +41,22 @@ export default {
 
 
  
-  //Get all forums
-getForums: function() {
-  return axios.get("/api/forum");
-},
-// Gets the book with the given id
-getForum: function(id) {
-  return axios.get("/api/forum/" + id);
-},
-// Deletes the book with the given id
-deleteForum: function(id) {
-  return axios.delete("/api/forum/" + id);
-},
-// Saves a book to the database
-saveForum: function(forumData) {
-  return axios.post("/api/forum", forumData);
-},
+//   //Get all forums
+// getForums: function() {
+//   return axios.get("/api/forum");
+// },
+// // Gets the book with the given id
+// getForum: function(id) {
+//   return axios.get("/api/forum/" + id);
+// },
+// // Deletes the book with the given id
+// deleteForum: function(id) {
+//   return axios.delete("/api/forum/" + id);
+// },
+// // Saves a book to the database
+// saveForum: function(forumData) {
+//   return axios.post("/api/forum", forumData);
+// },
 
 
   // Gets all Meetups
