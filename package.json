@@ -4,13 +4,16 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    // "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "seed": "node scripts/seedDB.js",
     "install": "cd client && yarn install",
-    "build": "cd client && npm run build",
+    // "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
   "author": "",
@@ -29,9 +32,11 @@
     "mongoose": "^5.4.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-scripts": "1.1.1",
     "react-router": "^4.3.1",
     "reactstrap": "^6.5.0",
     "request": "^2.88.0",
+    "serve": "^10.1.1",
     "snoowrap": "^1.15.2"
   },
   "repository": {
