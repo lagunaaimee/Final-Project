@@ -24,29 +24,33 @@ class Blog extends Component {
   render() {
     return (
       <Container fluid>
-        <Row>
-          {/* Blog Title Jumbotron */}
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>Blog</h1>
-            </Jumbotron>
+       
+          <Col size="lg-12">
+           {/* Image displayed at top of page */}
+            <div className="col-md-12 text-center">
+              <img className="img-fluid rounded" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+              </img>
+            </div>
           </Col>
 
+          <br></br>
+
+          <Row>
           {/* Blog Form Input */}
           <Col size="md-6">
-          <form>
+            <form>
               <Input name="title" placeholder="Blog Title (required)" />
               <Input name="author" placeholder="User Name (required)" />
               <TextArea name="synopsis" placeholder="Blog Details (required)" />
               <FormBtn>Post</FormBtn>
-          </form>
+            </form>
           </Col>
 
           {/*Saved Blogs from database displayed here */}
-          <Col size="md-12">
-            <Jumbotron>
+          <Col size="md-6">
+            {/* <Jumbotron>
               <h1>My Blogs</h1>
-            </Jumbotron>
+            </Jumbotron> */}
             {this.state.blog.length ? (
               <List>
                 {this.state.blog.map(blog => (

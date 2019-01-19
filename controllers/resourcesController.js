@@ -102,7 +102,7 @@ module.exports = {
     //   // Make an empty array for saving our scraped info
     //   var results = [];
 
-    //   // For each element with a "title" class
+    //   // For each element with a "title" className
     //   $("a.title").each(function (i, element) {
     //     // Save the text and href of each link enclosed in the current element
     //     //console.log($(element).children("a").children("p"))

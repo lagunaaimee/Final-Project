@@ -32,36 +32,43 @@ class Meetup extends Component {
     return (
       <Container fluid>
 
+{/* Image displayed at top of page */}
         <Col size="sm-12">
-          <img className="img-fluid rounded" src="https://secure.meetupstatic.com/photos/event/2/e/a/d/highres_450131949.jpeg" alt="">
-          </img>
+          <div className="col-md-12 text-center">
+            <img className="img-fluid rounded" src="https://secure.meetupstatic.com/photos/event/2/e/a/d/highres_450131949.jpeg" alt="">
+            </img>
+          </div>
         </Col>
-<br>
-</br>
+
+
+        <br>
+        </br>
         <Row>
           <Col size="md-12">
-            {this.state.meetups.length ? (
-              <List>
-                {this.state.meetups.map(meetup => {
-                  return (
-                    <ListItem key={meetup._id}>
-                      <a href={meetup.link}>
-                        <strong>
-                          {meetup.name}
-                        </strong>
-                      </a>
-                      <p>
-                        {meetup.description}
-                        {meetup.city} {meetup.state} by {meetup.who}
-                      </p>
-                      {/* <DeleteBtn /> */}
-                    </ListItem>
-                  );
-                })}
-              </List>
-            ) : (
-                <h3>No Results to Display</h3>
-              )}
+            <div className="col-md-8 text-center">
+              {this.state.meetups.length ? (
+                <List>
+                  {this.state.meetups.map(meetup => {
+                    return (
+                      <ListItem key={meetup._id}>
+                        <a href={meetup.link}>
+                          <strong>
+                            {meetup.name}
+                          </strong>
+                        </a>
+                        <p>
+                          {meetup.description}
+                          {meetup.city} {meetup.state} by {meetup.who}
+                        </p>
+                        {/* <DeleteBtn /> */}
+                      </ListItem>
+                    );
+                  })}
+                </List>
+              ) : (
+                  <h3>No Results to Display</h3>
+                )}
+            </div>
           </Col>
         </Row>
       </Container>
