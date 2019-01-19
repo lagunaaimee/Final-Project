@@ -37,7 +37,7 @@ class Home extends Component {
         <div className="row align-items-center">
           <div className="col-md-12 text-center">
             <h1>Congratulations, you're a Full-Stack Dev!</h1>
-            <h3>Now what???</h3>
+            <h3>Now what?</h3>
           </div>
           <br></br>
 
@@ -54,7 +54,7 @@ class Home extends Component {
 
           <div className="card text-white bg-secondary my-4 col-md-12 text-center">
             <div className="card-body">
-              <h2 className="text-white m-0">Categories</h2>
+              <h2 className="text-white m-0">The Hub</h2>
             </div>
           </div>
           {/* Div displaying team members */}

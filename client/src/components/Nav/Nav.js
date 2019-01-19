@@ -17,9 +17,9 @@ const Nav = () => (
           <li className="nav-item">
             <a className="nav-link" href="/meetup">Meetup</a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a className="nav-link" href="/forum">Forum </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a className="nav-link" href="/blog">Blog</a>
           </li>

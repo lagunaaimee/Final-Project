@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Jumbotron from "../../components/Jumbotron";
+// import Jumbotron from "../../components/Jumbotron";
 import API from "../../utils/API";
 import DeleteBtn from "../../components/DeleteBtn";
 import { Col, Row, Container } from "../../components/Grid";
@@ -28,7 +28,7 @@ class Blog extends Component {
           <Col size="lg-12">
            {/* Image displayed at top of page */}
             <div className="col-md-12 text-center">
-              <img className="img-fluid rounded" src="https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+              <img className="img-fluid rounded" src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1549699%2Fpexels-photo-1549699.jpeg%3Fcs%3Dsrgb%26dl%3Dblog-classic-close-up-1549699.jpg%26fm%3Djpg" alt="">
               </img>
             </div>
           </Col>
