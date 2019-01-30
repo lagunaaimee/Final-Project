@@ -27,11 +27,8 @@ class Blog extends Component {
        
           <Col size="lg-12">
            {/* Image displayed at top of page */}
-            <div className="col-md-12 text-center">
               <img className="img-fluid rounded" src="https://slack-imgs.com/?c=1&url=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1549699%2Fpexels-photo-1549699.jpeg%3Fcs%3Dsrgb%26dl%3Dblog-classic-close-up-1549699.jpg%26fm%3Djpg" alt="">
               </img>
-            </div>
-          </Col>
 
           <br></br>
 
@@ -47,7 +44,7 @@ class Blog extends Component {
           </Col>
 
           {/*Saved Blogs from database displayed here */}
-          <Col size="md-6">
+          {/* <Col size="md-6"> */}
             {/* <Jumbotron>
               <h1>My Blogs</h1>
             </Jumbotron> */}
@@ -67,8 +64,8 @@ class Blog extends Component {
             ) : (
                 <h3>No Results to Display</h3>
               )}
+              </Row>
           </Col>
-        </Row>
       </Container>
     );
   }
